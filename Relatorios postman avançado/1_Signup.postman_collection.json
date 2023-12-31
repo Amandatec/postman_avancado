@@ -1,0 +1,1217 @@
+{
+	"info": {
+		"_postman_id": "964ba7fe-9828-468f-b20f-d64939bf1e99",
+		"name": "1_Signup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30574089",
+		"_collection_link": "https://blue-star-904829.postman.co/workspace/Treinamento-Postman-Avan%25C3%25A7ado~cd81199b-5d95-4a45-8412-e6247c377c20/collection/30574089-964ba7fe-9828-468f-b20f-d64939bf1e99?action=share&source=collection_link&creator=30574089"
+	},
+	"item": [
+		{
+			"name": "Functional",
+			"item": [
+				{
+					"name": "Signup - Success",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function firstName() {\r",
+									"    \r",
+									"    let firstName=[\"Pedro\", \"Lucas\", \"Mateus\", \"Miguel\", \"Arthur\", \"Gabriel\", \"Enzo\", \"Matheus\", \"Rafael\", \"Heitor\", \"Gustavo\", \"Felipe\", \"Samuel\", \"Benjamin\", \"Davi\", \"Joaquim\", \"Daniel\", \"Leonardo\",\"Henry\", \"Pietro\", \"Eduardo\", \"Isaac\", \"Victor\", \"Thiago\", \"Lucas\", \"Fernando\", \"Bruno\",  \"Breno\", \"Raul\", \"Caio\", \"Ian\", \"Lucca\", \"Carlos\", \"Vitor\", \"Murilo\", \"Igor\", \"Alexandre\", \"Ricardo\", \"Hugo\", \"Nicolas\", \"Marcelo\", \"Wagner\", \"Luciano\", \"Diego\", \"Alex\", \"Isabella\", \"Sophia\", \"Alice\", \"Laura\", \"Valentina\", \"Helena\", \"Luiza\", \"Manuela\", \"Maria Eduarda\", \"Lara\", \"Mariana\", \"Gabriela\", \"Rafaela\", \"Beatriz\", \"Isadora\", \"Ana Clara\", \"Yasmin\", \"Nicole\", \"Larissa\", \"Amanda\", \"Bianca\", \"Mirella\", \"Camila\", \"Isis\",\"Sophie\", \"Fernanda\",\"Gabrielle\", \"Aline\", \"Nathalia\", \"Carolina\", \"Elaine\", \"Juliana\", \"Tatiane\", \"Cristiane\", \"Renata\", \"Luana\", \"Lorena\", \"Daniela\", \"Clara\", \"Eduarda\", \"Vanessa\"];\r",
+									"\r",
+									"    let randomItem = firstName[Math.floor(Math.random() * firstName.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"FirstName\", firstName())\r",
+									"\r",
+									"\r",
+									"\r",
+									"function lastName() {\r",
+									"    \r",
+									"    let lastName = [\"Santos\", \"Silva\", \"Oliveira\", \"Souza\", \"Costa\", \"Pereira\", \"Lima\", \"Martins\", \"Almeida\", \"Rocha\", \"Ferreira\", \"Barbosa\", \"Lima\", \"Pereira\", \"Silva\", \"Oliveira\", \"Souza\", \"Costa\", \"Martins\", \"Almeida\", \"Rocha\", \"Ferreira\", \"Barbosa\", \"Lima\", \"Almeida\", \"Martins\", \"Souza\", \"Costa\", \"Oliveira\", \"Almeida\", \"Rocha\", \"Ferreira\", \"Barbosa\", \"Silva\", \"Santos\", \"Oliveira\", \"Souza\", \"Costa\", \"Martins\", \"Almeida\", \"Rocha\", \"Ferreira\", \"Barbosa\", \"Lima\", \"Oliveira\", \"Almeida\", \"Silva\", \"Santos\", \"Souza\", \"Costa\", \"Martins\", \"Rocha\", \"Ferreira\", \"Barbosa\", \"Lima\", \"Oliveira\", \"Almeida\", \"Souza\", \"Costa\", \"Martins\", \"Rocha\", \"Ferreira\", \"Barbosa\", \"Silva\", \"Santos\", \"Oliveira\", \"Souza\", \"Costa\", \"Martins\", \"Almeida\", \"Rocha\", \"Ferreira\", \"Barbosa\", \"Lima\", \"Oliveira\", \"Almeida\", \"Silva\", \"Santos\"];\r",
+									"\r",
+									"    let randomItem = lastName[Math.floor(Math.random() * lastName.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"LastName\", lastName())\r",
+									"\r",
+									"pm.environment.set(\"FullName\", pm.environment.get(\"FirstName\") +  \" \"+ pm.environment.get(\"LastName\"));\r",
+									"\r",
+									"function accessProfile() {\r",
+									"    \r",
+									"    let accessProfile = [\"ADMIN\", \"FINANCEIRO\", \"MARKETING\", \"TI\", \"ATENDIMENTOCLIENTE\", \"JURIDICO\", \"VENDAS\", \"CONTROLADORIA\"];\r",
+									"\r",
+									"    let randomItem = accessProfile[Math.floor(Math.random() * accessProfile.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"AccessProfile\", accessProfile())\r",
+									"\r",
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if token exist\", function () {\r",
+									"    pm.expect(JSON.parse(responseBody).token).to.exist\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Check if Fullname is true\", function () {\r",
+									"    pm.expect(pm.environment.get(\"FullName\")).to.eql(JSON.parse(responseBody).user.fullName)\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Check if Mail is true\", function () {\r",
+									"    pm.expect(pm.environment.get(\"Mail\")).to.eql(JSON.parse(responseBody).user.mail)\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Check if AccessProfile is true\", function () {\r",
+									"    pm.expect(pm.environment.get(\"AccessProfile\")).to.eql(JSON.parse(responseBody).user.accessProfile)\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Check if Status is true\", function () {\r",
+									"    pm.expect(true).to.eql(JSON.parse(responseBody).user.status)\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"{{Password}}\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exceptions",
+			"item": [
+				{
+					"name": "Signup - AccessProfile required",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: O campo 'accessProfile' é obrigatório.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgAccessProfileRequired\")).to.eql(JSON.parse(responseBody).errors[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"{{Password}}\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Mail required",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: O e-mail informado está inválido\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgMailRequired\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"\",\r\n    \"password\": \"{{Password}}\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Mail duplicated",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: Usuário já cadastrado.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgUserExist\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"Valentina Souza_317@pioneermail.com\",\r\n    \"password\": \"{{Password}}\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password required",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 6-12.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgPasswordRequired\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password without lowercase letter",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 6-12.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgPasswordRequired\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"AQ432#\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password without especial character",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 6-12.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgPasswordRequired\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"AQ4327\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password without number",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 6-12.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgPasswordRequired\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"AQ#4587\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password with 5 character",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 6-12.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgPasswordRequired\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"Tes4#\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password with 6 numbers",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if token exist\", function () {\r",
+									"    pm.expect(JSON.parse(responseBody).token).to.exist\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"Tes4#u\",\r\n    \"confirmPassword\": \"Tes4#u\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password with 7 characters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if token exist\", function () {\r",
+									"    pm.expect(JSON.parse(responseBody).token).to.exist\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"AQ#458p\",\r\n    \"confirmPassword\": \"AQ#458p\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password with 11  characters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if token exist\", function () {\r",
+									"    pm.expect(JSON.parse(responseBody).token).to.exist\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"AQ#4587asdf\",\r\n    \"confirmPassword\": \"AQ#4587asdf\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - Password with 12 characters Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if token exist\", function () {\r",
+									"    pm.expect(JSON.parse(responseBody).token).to.exist\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"xAQ#4587asdf\",\r\n    \"confirmPassword\": \"xAQ#4587asdf\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUG Signup - Password with 13 characters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 6-12.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgPasswordRequired\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"zxAQ#4587asdf\",\r\n    \"confirmPassword\": \"zxAQ#4587asdf\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MELHORIA MSG Signup - ConfirmPassword required",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: O campo confirmação de senha é obrigatório\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgConfirmPasswordRequired\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"{{Password}}\",\r\n    \"confirmPassword\": \"\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MELHORIA MSG Signup - ConfirmPassword different",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg:As senhas não conferem.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgConfirmPasswordDontMatch\")).to.eql(JSON.parse(responseBody).alert[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"{{FullName}}\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"Bla34#45\",\r\n    \"confirmPassword\": \"Bla34#4\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup - FullName required Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function domain() {\r",
+									"\r",
+									"    let domain = [\"@examplemail.com\", \"@corporationmail.com\", \"@fantasyemail.com\", \"@innovationmail.com\", \"@globalconnect.com\",\r",
+									"\"@virtualemail.com\", \"@techsolutions.com\", \"@expressmail.com\", \"@creativeservices.com\", \"@futuregroup.com\",\r",
+									"\"@smarttechmail.com\", \"@adventureservices.com\", \"@quantummail.com\", \"@universemail.com\", \"@dreamworks.com\",\r",
+									"\"@pioneermail.com\", \"@stellarcommunications.com\", \"@galaxymail.com\", \"@blueskymail.com\", \"@infinitygroup.com\",\r",
+									"\"@fusionmail.com\", \"@ultratechmail.com\", \"@elementalmail.com\", \"@orbitalcommunications.com\", \"@digitalfrontiers.com\",\r",
+									"\"@visionarymail.com\", \"@metropolismail.com\", \"@dynamicgroup.com\", \"@stratospheremail.com\", \"@evolutionmail.com\"\r",
+									"]\r",
+									"\r",
+									"    let randomItem = domain[Math.floor(Math.random() * domain.length)];\r",
+									"\r",
+									"    return randomItem\r",
+									"}\r",
+									"\r",
+									"pm.environment.set(\"Domain\", domain())\r",
+									"\r",
+									"pm.environment.set(\"Mail\", pm.environment.get(\"FullName\") + \"_\" + pm.variables.replaceIn('{{$randomInt}}')+ pm.environment.get(\"Domain\")) "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check msg: O campo 'fullName' é obrigatório.\", function () {\r",
+									"    pm.expect(pm.globals.get(\"MsgFullNameRequired\")).to.eql(JSON.parse(responseBody).errors[0])\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"\",\r\n    \"mail\": \"{{Mail}}\",\r\n    \"password\": \"{{Password}}\",\r\n    \"confirmPassword\": \"{{Password}}\",\r\n    \"accessProfile\": \"{{AccessProfile}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
